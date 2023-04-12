@@ -225,7 +225,7 @@ li {
 - Mobile: 375px
 - Desktop: 1440px
 */
-@media only screen and (min-width: 375px) and (max-width: 600px){
+@media only screen and (min-width: 375px) and (max-width: 750px){
     .wrapper {
         flex-direction: column;
         box-shadow: none;
