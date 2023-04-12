@@ -1,0 +1,259 @@
+:root {
+    /* Colors */
+    --light-red : hsl(0, 100%, 65%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --light-slate-blue:hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue:hsla(256, 72%, 46%, 1);
+    --persian-blue:hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-gray-blue:hsl(224, 30%, 27%);
+    --light-gray-blue:hsla(224, 30%, 27%,0.5);
+    --light-red-neutral : hsla(0, 100%, 65%,0.1);
+    --orangey-yellow-neutral: hsla(39, 100%, 56%, 0.1);
+    --green-teal-neutral:hsla(166, 100%, 37%,0.1);
+    --cobalt-blue-neutal:hsla(234, 85%, 45%,0.1);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+  font-weight:100 900;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    font-family:'HankenGrotesk';
+    background-color: whitesmoke;
+}
+
+p {
+   
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 25px ;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h3, h4 {
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    min-height: 100dvh;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wrapper {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 25px;
+}
+
+
+
+
+/* ------ Result -------- */
+
+.wrapper #result {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border-radius: 25px;
+    align-items: center;
+    background-image: linear-gradient(to top, var(--light-royal-blue) 0%, var(--light-slate-blue)100%);
+}
+
+.result-body{
+
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    width: 125px;
+    height: 125px;
+    background-image: linear-gradient(to top, var(--persian-blue) 0%, var(--violet-blue) 100%);
+   
+}
+
+.result-body h1 {
+    color:var(--white);
+}
+
+#result h4{
+    color:var(--light-lavender);
+}
+
+#result h3{
+    color:var(--white);
+}
+
+
+#result p {
+    color:var(--light-lavender);
+}
+
+.result-end {
+    text-align: center;
+}
+
+/* ------ Summary------- */
+
+.wrapper #summary{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.grade {
+    color:var(--dark-gray-blue);
+}
+
+.grade-total {
+    color:var(--light-gray-blue);
+}
+
+#reaction{
+    background-color: var(--light-red-neutral);
+  
+}
+#reaction div:first-child{
+    color: var(--light-red);
+}
+
+#memory {
+    background-color: var(--orangey-yellow-neutral);
+}
+#memory div:first-child{
+    color: var(--orangey-yellow);
+}
+
+#verbal {
+    background-color: var(--green-teal-neutral);
+}
+#verbal div:first-child{
+    color: var(--green-teal);
+}
+
+#visual {
+    background-color: var(--cobalt-blue-neutal);
+}
+
+#visual div:first-child{
+    color: var(--cobalt-blue);
+}
+
+.summary-footer {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: end;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    padding: 15px;
+    margin: 25px 0;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 200ms ease-in;
+   
+}
+
+.button:hover {
+    background-image: linear-gradient(to top, var(--persian-blue) 0%, var(--violet-blue) 100%);
+}
+
+
+/* media queries
+- Mobile: 375px
+- Desktop: 1440px
+*/
+@media only screen and (min-width: 375px) and (max-width: 600px){
+    .wrapper {
+        flex-direction: column;
+    }
+
+    main {
+       display: block;
+       min-height: 0;
+        
+    }
+
+    .wrapper {
+        min-height: 0;
+      
+    }
+
+    .wrapper #result {
+        min-height: 40dvh;
+        border-radius: 0 0 25px 25px;
+    }
+
+    li {
+        padding: 20px;
+    }
+
+  
+    
+
+
+        
+
+  
+}
+
+
+
